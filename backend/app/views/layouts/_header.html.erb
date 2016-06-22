@@ -5,5 +5,18 @@
         <strong class="korima-title">KorimaGAS</strong>
       <% end %>
     </div>
+    <div class="top-bar-right">
+      <% if user_signed_in?  %>
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li>
+            <a href="#"><%= current_user.email %></a>
+            <ul class="menu vertical">
+              <li><%= link_to "Editar Perfil", edit_user_registration_path %></li>
+              <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        </ul>
+      <% end %>
+    </div>
   </div>
 </header>

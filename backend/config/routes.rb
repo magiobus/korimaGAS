@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   get '/reportar' => 'stations#report', as: :gas_report
-
+  devise_scope :user do
+    get "/login" => "devise/sessions#new"
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
