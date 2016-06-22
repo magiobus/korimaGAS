@@ -17,14 +17,14 @@
         </h2>
         <p><%= station.street %></p>
       </div>
+      <strong><p>Mensaje:</p></strong>
+
       <div class="station-message">
         <p><%= station.message %></p>
       </div>
       <div class="station-updated">
-        <p> <%= station.updated_at %></p>
+        <p>Actualizado hace <strong><%= time_ago_in_words(station.updated_at) %></strong></p>
       </div>
-
-      <p>Counter = <%= station.count %></p>
 
       <div class="update-button-container">
         <%= link_to(public_gas_update_path(station)) do %>
