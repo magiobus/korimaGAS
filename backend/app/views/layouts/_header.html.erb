@@ -9,7 +9,7 @@
       <% if user_signed_in?  %>
         <ul class="dropdown menu" data-dropdown-menu>
           <li>
-            <a href="#"><%= current_user.email %></a>
+            <a href="#"><%= current_user.email %> <%= '(Admin)' if current_user.admin? %></a>
             <ul class="menu vertical">
               <li><%= link_to "Editar Perfil", edit_user_registration_path %></li>
               <li><%= link_to "Salir", destroy_user_session_path, method: :delete %></li>

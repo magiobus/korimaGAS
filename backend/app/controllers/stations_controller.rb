@@ -1,6 +1,6 @@
 class StationsController < ApplicationController
-  before_action :set_station, only: [:show, :edit, :destroy]
-  before_action :require_admin, except: [:index, :update, :report]
+  before_action :set_station, only: [:show, :edit, :update, :destroy]
+  before_action :require_admin, except: [:index, :report]
 
   def index
     @stations = Station.all.order(updated_at: :desc)
