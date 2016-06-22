@@ -1,0 +1,45 @@
+$button-background: #E99743;
+
+.welcome-banner{
+  background-image: url('madmax-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 1em;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .welcome-content{
+    text-align: center;
+    padding: 0em 4em;
+    h2{
+      color: #EEE;
+      font-size: 5em;
+      font-weight: bold;
+      font-family: 'Fjalla One', sans-serif;
+      line-height: 1em;
+      padding: 1em;
+    }
+    .list-buttons{
+      list-style-type: none;
+      li{
+        margin: 1em;
+        .list-button{
+          background-color: $button-background;
+          padding: 1em;
+          font-size: 2em;
+          border-radius: 0.5em;
+          color: #EEE;
+          font-family: 'Fjalla One', sans-serif;
+          width: 13em;
+          &:hover{
+            background-color: $button-background - 10;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import 'responsive';

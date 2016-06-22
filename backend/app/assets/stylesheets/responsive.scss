@@ -1,0 +1,68 @@
+// extra small
+@media screen and (max-width: 400px) {
+  body{
+    background: green;
+  }
+}
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+
+  body{
+    background-color: red;
+  }
+
+  .welcome-banner{
+    padding: 0;
+    height: 100%;
+    background-position: center;
+    .welcome-content{
+      padding: 0;
+      h2{
+        padding: 0;
+        font-size: 3em;
+      }
+      .list-buttons{
+        margin: 2.5em 0;
+        .list-button{
+          font-size: 1.75em;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  body{
+    background-color: blue;
+  }
+
+  .welcome-banner{
+    padding: 0;
+    height: 100%;
+    .welcome-content{
+      padding: 0;
+      h2{
+        font-size: 4em;
+      }
+      .list-buttons{
+        margin: 4em 0;
+        .list-button{
+          font-size: 1.75em;
+          padding: 0.75em;
+          width: 11em;
+        }
+      }
+    }
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
