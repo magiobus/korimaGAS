@@ -2,8 +2,16 @@
   <div class="welcome-content">
     <h2>Encuentra  gasolina en Chihuahua</h2>
     <ul class="list-buttons">
-      <li><button class="list-button">Ver gasolineras</button></li>
-      <li><button class="list-button">Reportar gasolinera</button></li>
+      <li>
+        <%= link_to(stations_path) do %>
+          <button class="list-button">Ver gasolineras</button>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to(gas_report_path) do %>
+          <button class="list-button">Reportar gasolinera</button>
+        <% end %>
+      </li>
     </ul>
   </div>
 </div>
