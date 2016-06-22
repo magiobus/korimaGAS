@@ -1,6 +1,6 @@
-= korimaGAS
+# korimaGAS
 
-==== Se está viviendo el #duartepocalipsis‬ en la ciudad de Chihuahua México.
+### Se está viviendo el #duartepocalipsis‬ en la ciudad de Chihuahua México.
 
 * No hay Vivebus.
 * No hay Uber.
@@ -8,7 +8,7 @@
 * Hace mucho calor.
 * Las quesadillas tienen queso.
 
-=====Esta aplicación sirve para reportar abastecimiento de gasolineras en la ciudad de Chihuahua.
+#### Esta aplicación sirve para reportar abastecimiento de gasolineras en la ciudad de Chihuahua.
 
 
 
