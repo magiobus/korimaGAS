@@ -1,4 +1,13 @@
 $button-background: #E99743;
+$title-color: #2F292B;
+
+.korima-title{
+  color: $title-color;
+  font-size: 1.25em;
+  &:hover{
+    color: $title-color - 5;
+  }
+}
 
 .welcome-banner{
   background-image: url('madmax-background.jpg');
