@@ -1,28 +1,22 @@
-== README
+= korimaGAS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+==== Se está viviendo el #duartepocalipsis‬ en la ciudad de Chihuahua México.
 
-Things you may want to cover:
+* No hay Vivebus.
+* No hay Uber.
+* _No_ _hay_ _gasolina_
+* Hace mucho calor.
+* Las quesadillas tienen queso.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+=====Esta aplicación sirve para reportar abastecimiento de gasolineras en la ciudad de Chihuahua.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+Para correr la aplicación: 
+
+<tt>bundle install</tt>
+
+<tt>rake db:migrate</tt>
+
+<tt>rails server</tt>
