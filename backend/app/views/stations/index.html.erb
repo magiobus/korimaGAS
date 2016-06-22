@@ -1,1 +1,14 @@
 listado de gasolineras
+
+<ul>
+  <li>
+    <% @stations.each do |station| %>
+        <%= station.name %>
+        <%= station.street %>
+        Gas?: <%= station.gas? %>
+        Abierto? <%= station.open? %>
+        <%= station.phone %>
+        <%= station.updated_at %>
+    <% end %>
+  </li>
+</ul>

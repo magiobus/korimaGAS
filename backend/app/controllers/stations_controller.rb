@@ -35,6 +35,10 @@ class StationsController < ApplicationController
     end
   end
 
+  #this only updates :gas and :open and is public to everybody
+  def update_station
+  end
+
   def destroy
     if @station.destroy
       flash[:danger] = 'Tu gasolinera ha sido destruida.'
@@ -43,9 +47,6 @@ class StationsController < ApplicationController
     end
 
     redirect_to stations_path
-  end
-
-  def report
   end
 
 
