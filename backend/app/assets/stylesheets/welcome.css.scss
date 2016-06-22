@@ -6,7 +6,7 @@ $button-background: #E99743;
   background-size: cover;
   width: 100%;
   padding: 1em;
-  height: 80%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +23,7 @@ $button-background: #E99743;
     }
     .list-buttons{
       list-style-type: none;
+      padding: 3em 0;
       li{
         margin: 1em;
         .list-button{
