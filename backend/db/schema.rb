@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622094646) do
+ActiveRecord::Schema.define(version: 20160622155719) do
 
   create_table "stations", force: :cascade do |t|
     t.string   "name"
@@ -19,10 +19,11 @@ ActiveRecord::Schema.define(version: 20160622094646) do
     t.string   "lat"
     t.string   "lng"
     t.string   "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.boolean  "gas"
-    t.boolean  "open"
+    t.string   "message",    limit: 140
+    t.integer  "count",                  default: 0
   end
 
   create_table "users", force: :cascade do |t|

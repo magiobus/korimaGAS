@@ -1,3 +1,54 @@
 // Place all the styles related to the stations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.stations-list-title{
+  h2{
+    font-size: 2em;
+    margin: 0;
+  }
+  p{
+    margin: 0;
+  }
+}
+
+
+.stations-list{
+  list-style-type: none;
+  margin: 1em;
+  .station-item{
+    background-color: #F3C99D;
+    padding: 0.75em;
+    border-radius: 0.2em;
+    margin: 1em 0;
+    .station-name{
+      font-weight: 500;
+      margin: 0;
+      .gas-status{
+        font-size: 1em;
+        font-weight: 900;
+      }
+      .yes-gas{
+        color: #58B547;
+      }
+      .no-gas{
+        color: #DA3700;
+      }
+    }
+    .station-updated{
+      margin: 0;
+    }
+    .update-button-container{
+      a{
+        .user-update-button{
+          background: #E99743;
+          color: #2F292B;
+          padding: 1.25em;
+          width: 100%;
+          font-weight: 600;
+          border-radius: 0.5em;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 class StationsController < ApplicationController
   before_action :set_station, only: [:show, :edit, :update, :destroy]
-  before_action :require_admin, except: [:index, :report]
+  before_action :require_admin, except: [:index, :report, :update_station]
 
   def index
     @stations = Station.all.order(updated_at: :desc)
@@ -53,7 +53,7 @@ class StationsController < ApplicationController
   private
 
   def station_params
-    params.require(:station).permit(:name, :street, :lat, :lng, :phone, :gas, :open)
+    params.require(:station).permit(:name, :street, :lat, :lng, :phone, :gas, :message, :count)
   end
 
   #simple encapsulation to not write this line all the time in required actions
