@@ -1,6 +1,6 @@
 class StationsController < ApplicationController
-  before_action :set_station, only: [:show, :edit, :update, :destroy]
-  before_action :require_admin, except: [:index, :report, :update_station]
+  before_action :set_station, only: [:show, :edit, :update, :destroy, :update_station]
+  before_action :require_admin, except: [:index, :report, :update_station, :update]
 
   def index
     @stations = Station.all.order(updated_at: :desc)
@@ -27,15 +27,26 @@ class StationsController < ApplicationController
   end
 
   def update
-    if @station.update station_params
-      flash[:success] = 'Tu gasolinera ha sido actualizada'
-      redirect_to stations_path
+    if user_signed_in? && current_user.admin?
+      if @station.update station_params
+        puts "logeado y modificado----------"
+        flash[:success] = 'Tu gasolinera ha sido actualizada'
+        redirect_to stations_path
+      else
+        render :edit
+      end
     else
-      render :edit
+      if @station.update update_station_params
+        puts "NO logeado y modificado!!----------"
+        flash[:success] = 'Tu gasolinera ha sido actualizada'
+        redirect_to stations_path
+      else
+        render :edit
+      end
     end
+
   end
 
-  #this only updates :gas and :open and is public to everybody
   def update_station
   end
 
@@ -49,11 +60,14 @@ class StationsController < ApplicationController
     redirect_to stations_path
   end
 
-
   private
 
   def station_params
     params.require(:station).permit(:name, :street, :lat, :lng, :phone, :gas, :message, :count)
+  end
+
+  def update_station_params
+    params.require(:station).permit(:gas, :message, :count)
   end
 
   #simple encapsulation to not write this line all the time in required actions

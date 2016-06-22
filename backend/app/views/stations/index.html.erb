@@ -25,9 +25,9 @@
       </div>
 
       <div class="update-button-container">
-        <a href="#">
+        <%= link_to(public_gas_update_path(station)) do %>
           <button class="user-update-button">Quiero Actualizar!</button>
-        </a>
+        <% end %>
       </div>
 
       <% if user_signed_in? && current_user.admin? %>

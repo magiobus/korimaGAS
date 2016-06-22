@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-  get '/actualizar' => 'stations#update_station', as: :public_gas_update
+  get '/gasolineras/:id/actualizar' => 'stations#update_station', as: :public_gas_update
   devise_scope :user do
     get "/login" => "devise/sessions#new"
   end

@@ -38,17 +38,14 @@
     .station-updated{
       margin: 0;
     }
-    .update-button-container{
-      a{
-        .user-update-button{
-          background: #E99743;
-          color: #2F292B;
-          padding: 1.25em;
-          width: 100%;
-          font-weight: 600;
-          border-radius: 0.5em;
-        }
-      }
-    }
   }
+}
+
+.user-update-button{
+  background: #E99743;
+  color: #2F292B;
+  padding: 1.25em;
+  width: 100%;
+  font-weight: 600;
+  border-radius: 0.5em;
 }
