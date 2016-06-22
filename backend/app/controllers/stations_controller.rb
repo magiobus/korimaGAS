@@ -27,9 +27,9 @@ class StationsController < ApplicationController
   end
 
   def update
+    @station.increment!(:count)
     if user_signed_in? && current_user.admin?
       if @station.update station_params
-        puts "logeado y modificado----------"
         flash[:success] = 'Tu gasolinera ha sido actualizada'
         redirect_to stations_path
       else
@@ -37,7 +37,6 @@ class StationsController < ApplicationController
       end
     else
       if @station.update update_station_params
-        puts "NO logeado y modificado!!----------"
         flash[:success] = 'Tu gasolinera ha sido actualizada'
         redirect_to stations_path
       else
@@ -45,9 +44,6 @@ class StationsController < ApplicationController
       end
     end
 
-  end
-
-  def update_station
   end
 
   def destroy

@@ -18,11 +18,13 @@
         <p><%= station.street %></p>
       </div>
       <div class="station-message">
-        <p>"<%= station.message %>"</p>
+        <p><%= station.message %></p>
       </div>
       <div class="station-updated">
         <p> <%= station.updated_at %></p>
       </div>
+
+      <p>Counter = <%= station.count %></p>
 
       <div class="update-button-container">
         <%= link_to(public_gas_update_path(station)) do %>
