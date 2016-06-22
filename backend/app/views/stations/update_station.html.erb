@@ -1,0 +1,33 @@
+<div class="row text-center stations-user-update-container">
+  <h2>Actualizar <%= @station.name %></h2>
+  <p>Gracias por contribuir a KorimaGAS!</p>
+
+  <div class="row">
+    <div class="small-11 large-12 columns small-centered">
+      <%= form_for @station do |f| %>
+        <br>
+        <div class="row">
+
+
+          <div class="medium-10 medium-centered columns">
+            <div class="gas-status">
+              <label>Hay Gasolina?
+                <%= f.check_box :gas %>
+              </label>
+            </div>
+
+            <label>Mensaje (140 caracteres)
+                <%= f.text_area :message, autofocus: true, rows: 4 %>
+            </label>
+
+            <%= f.submit "Actualizar Gasolinera",  class: "user-update-button" %>
+
+          </div>
+          <br><br><br>
+          <%= link_to 'Volver a Gasolineras', stations_path %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

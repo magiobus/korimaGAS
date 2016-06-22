@@ -1,0 +1,42 @@
+<%= form_for @station do |f| %>
+  <br>
+  <div class="row">
+
+    <div class="medium-10 medium-centered columns">
+      <h2> Agregar Gasolinera</h2>
+
+      <label>Nombre de Gasolinera
+        <%= f.text_field :name, autofocus: true %>
+      </label>
+      <label>Calle
+          <%= f.text_field :street, autofocus: true %>
+      </label>
+      <label>Hay Gasolina?
+        <%= f.check_box :gas %>
+      </label>
+
+      <label>Mensaje
+          <%= f.text_area :message, autofocus: true %>
+      </label>
+
+      <label>Telefono (opcional)
+          <%= f.text_field :phone, autofocus: true %>
+      </label>
+
+      <div class="large-12 columns">
+        <br><br>
+        <p>Location (Opcional)</p>
+        <label class="large-6 columns">Lat
+            <%= f.text_field :lat, autofocus: true %>
+        </label>
+        <label class="large-6 columns">Lng
+            <%= f.text_field :lng, autofocus: true %>
+        </label>
+      </div>
+
+      <%= f.submit class: "button" %>
+
+    </div>
+    <%= link_to 'Volver a Gasolineras', stations_path %>
+  </div>
+<% end %>

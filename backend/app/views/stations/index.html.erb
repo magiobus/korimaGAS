@@ -1,1 +1,43 @@
-listado de gasolineras
+<div class="row text-center stations-list-title">
+  <h2>Listado de Gasolineras</h2>
+  <p>Si sabes el status de alguna, por favor actualiza!</p>
+</div>
+
+<ul class="stations-list">
+    <% @stations.each do |station| %>
+    <li class="station-item">
+      <div class="station-title">
+        <h2 class="station-name">
+          <%= station.name %>
+          <% if station.gas? %>
+            <span class="yes-gas gas-status">Hay Gas!</span>
+          <% else %>
+          <span class="no-gas gas-status">No Gas</span>
+          <% end %>
+        </h2>
+        <p><%= station.street %></p>
+      </div>
+      <strong><p>Mensaje:</p></strong>
+
+      <div class="station-message">
+        <p><%= station.message %></p>
+      </div>
+      <div class="station-updated">
+        <p>Actualizado hace <strong><%= time_ago_in_words(station.updated_at) %></strong></p>
+      </div>
+
+      <div class="update-button-container">
+        <%= link_to(public_gas_update_path(station)) do %>
+          <button class="user-update-button">Quiero Actualizar!</button>
+        <% end %>
+      </div>
+
+      <% if user_signed_in? && current_user.admin? %>
+        <div class="station-buttons">
+          <%= link_to 'Editar', edit_station_path(station) %>
+          <%= link_to 'Borrar', station, method: :delete %>
+        </div>
+      <% end %>
+    </li>
+    <% end %>
+</ul>

@@ -1,0 +1,23 @@
+.stations-user-update-container{
+  h2{
+    font-size: 1.25em;
+    font-weight: 500;
+    padding: 1em 0 0 0;
+  }
+  p{
+    margin: 0;
+  }
+
+  .gas-status{
+    label{
+      font-size: 1.2em;
+    }
+    [type='checkbox']{
+      margin: 0 1em;
+      /* All browsers except webkit*/
+      transform: scale(1.8);
+       /* Webkit browsers*/
+       -webkit-transform: scale(1.8);
+    }
+  }
+}

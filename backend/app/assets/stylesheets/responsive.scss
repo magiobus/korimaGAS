@@ -1,15 +1,5 @@
-// extra small
-@media screen and (max-width: 400px) {
-  body{
-    background: green;
-  }
-}
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-
-  body{
-    background-color: red;
-  }
 
   .welcome-banner{
     padding: 0;
@@ -37,9 +27,6 @@
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-  body{
-    background-color: blue;
-  }
 
   .welcome-banner{
     padding: 0;
