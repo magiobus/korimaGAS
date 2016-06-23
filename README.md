@@ -21,7 +21,7 @@ Para correr la aplicación:
 
 <tt>rails server</tt>
 
-**Hecho con amor por @magiobus** 
+**Hecho con amor por <a href="http://github.com/magiobus"/> @magiobus</a>** 
 
 <a href="http://facebook.com/magiobus"/>Facebook </a>
 
