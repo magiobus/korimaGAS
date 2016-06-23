@@ -20,3 +20,10 @@ Para correr la aplicación:
 <tt>rake db:migrate</tt>
 
 <tt>rails server</tt>
+
+**Hecho con amor por @magiobus** 
+
+<a href="http://facebook.com/magiobus"/>Facebook </a>
+
+<a href="http://twitter.com/magiobus"/>Twitter </a>
+
