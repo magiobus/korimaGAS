@@ -21,9 +21,13 @@ Para correr la aplicación:
 
 <tt>rails server</tt>
 
-**Hecho con amor por <a href="http://github.com/magiobus"/> @magiobus</a>** 
-
+**Hecho con amor por <a href="http://github.com/magiobus"/> @magiobus</a>**
 <a href="http://facebook.com/magiobus"/>Facebook </a>
-
 <a href="http://twitter.com/magiobus"/>Twitter </a>
+
+**Android App por <a href="http://github.com/gerardogtn"/> @gerardogtn</a>**
+<a href="http://twitter.com/gerardogtn"/>Twitter </a>
+
+**Código Android acá =>** https://github.com/gerardogtn/KorimaGas
+
 
